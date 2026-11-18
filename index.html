@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Website Layout A</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slackwater Paddle Co. – Kayak rentals on the river</title>
+<meta name="description" content="Rent a kayak or canoe by the hour, with a shuttle back to the dock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --river: #0f3b3a;
+    --ink: #10201f;
+    --buoy: #f2c230;
+    --mist: #d6e4e2;
+    --paper: #f7fafa;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); font-size: 1.125rem; line-height: 1.6; color: var(--ink); background: var(--paper); }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--buoy); outline-offset: 3px; }
+  .wrap { width: min(1100px, 100% - 2.5rem); margin-inline: auto; }
+
+  header.top { background: var(--river); color: var(--paper); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 1.1rem; }
+  .logo { font-family: var(--display); font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+  nav a { margin-left: 1.5rem; text-decoration: none; font-size: 1rem; }
+  nav a:hover { text-decoration: underline; }
+
+  .hero { background: var(--river); color: var(--paper); padding-block: clamp(3rem, 9vw, 7rem) 0; }
+  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 8vw, 5.5rem); line-height: 1; letter-spacing: -0.02em; max-width: 14ch; }
+  .hero p { margin-top: 1.5rem; max-width: 48ch; color: var(--mist); }
+  .actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+  .btn { display: inline-block; padding: 0.85rem 1.6rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
+  .btn.primary { background: var(--buoy); color: var(--ink); }
+  .btn.primary:hover { background: #ffd34d; }
+  .btn.ghost { border: 2px solid var(--mist); color: var(--paper); }
+  .btn.ghost:hover { background: rgba(255,255,255,.1); }
+  .wave { display: block; width: 100%; height: clamp(40px, 8vw, 90px); margin-top: 3rem; }
+
+  .features { padding-block: clamp(3rem, 8vw, 6rem); }
+  .features h2 { font-family: var(--display); font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; max-width: 20ch; }
+  .grid { display: grid; gap: 1.5rem; margin-top: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .card { background: #fff; border: 1px solid var(--mist); border-radius: 6px; overflow: hidden; }
+  .card .band { height: 10px; }
+  .card:nth-child(1) .band { background: var(--river); }
+  .card:nth-child(2) .band { background: var(--buoy); }
+  .card:nth-child(3) .band { background: var(--mist); }
+  .card .inner { padding: 1.5rem; }
+  .card h3 { font-family: var(--display); font-size: 1.35rem; margin-bottom: 0.5rem; }
+
+  .cta { background: var(--mist); padding-block: 3rem; }
+  .cta .wrap { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; align-items: center; }
+  .cta h2 { font-family: var(--display); font-size: clamp(1.5rem, 3.5vw, 2.1rem); max-width: 22ch; line-height: 1.15; }
+
+  footer { background: var(--ink); color: var(--mist); padding-block: 2.5rem; font-size: 1rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
+  footer strong { color: var(--paper); font-family: var(--display); }
+  footer ul { list-style: none; padding: 0; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
-  <h1>Test Website Layout A Main Heading</h1>
-  <p>This is a paragraph of visible text.</p>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">Slackwater</a>
+    <nav aria-label="Main">
+      <a href="#rentals">Rentals</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Get on the river today.</h1>
+      <p>Rent a kayak or canoe by the hour. We hand you a paddle, a life jacket and a map, then pick you up downstream.</p>
+      <div class="actions">
+        <a class="btn primary" href="#book">Book a boat</a>
+        <a class="btn ghost" href="#rentals">See what we rent</a>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 45 C 150 90, 300 0, 450 45 S 750 90, 900 45 S 1100 10, 1200 45 V90 H0 Z" fill="#f7fafa"/>
+    </svg>
+  </section>
+
+  <section class="features" id="rentals">
+    <div class="wrap">
+      <h2>Everything you need is in the price.</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="band"></div>
+          <div class="inner">
+            <h3>Hourly boats</h3>
+            <p>Choose a single kayak, a tandem or a canoe. Rent for one hour or the whole afternoon.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="band"></div>
+          <div class="inner">
+            <h3>Shuttle included</h3>
+            <p>Paddle one way and we drive you back to the dock. No need to fight the current.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="band"></div>
+          <div class="inner">
+            <h3>First-timer friendly</h3>
+            <p>A guide gives a ten-minute lesson at the dock. Life jackets are fitted for every age.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="book">
+    <div class="wrap">
+      <h2>Pick a day and we'll have a boat ready.</h2>
+      <a class="btn primary" href="#contact">Reserve your spot</a>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <strong>Slackwater Paddle Co.</strong>
+      <p>12 Landing Road<br>Open daily, 9 am to 6 pm</p>
+    </div>
+    <ul>
+      <li><a href="#rentals">Rentals</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+    </ul>
+    <p>© 2026 Slackwater Paddle Co.</p>
+  </div>
+</footer>
+
 </body>
 </html>
