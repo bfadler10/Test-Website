@@ -3,176 +3,182 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hollis Street Bakery | Fresh bread, every morning</title>
-<meta name="description" content="A neighborhood bakery making bread, pastry and good mornings since 1987.">
+<title>Atelier Levain | Artisan sourdough, baked by hand</title>
+<meta name="description" content="Small-batch, naturally leavened sourdough bread, fermented slowly and baked by hand each week.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1c2340;--butter:#f6c945;--blush:#f4b6c2;--crust:#b5651d;--paper:#fffaf0;--sky:#bfd7ea;--ease:cubic-bezier(.19,1,.22,1);
---d:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--s:"Instrument Serif",Georgia,serif}
+:root{--ivory:#f6f1e7;--bone:#ebe3d3;--espresso:#241b16;--olive:#2b3528;--brass:#b08d57;--clay:#8a6a4a;--line:rgba(36,27,22,.18);--ease:cubic-bezier(.19,1,.22,1);
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--d);font-weight:500;font-size:1.0625rem;line-height:1.55;background:var(--paper);color:var(--ink);overflow-x:hidden}
+body{font-family:var(--sans);font-size:1rem;line-height:1.65;background:var(--ivory);color:var(--espresso);overflow-x:hidden}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
-h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:.95}
-.serif{font-family:var(--s);font-weight:400;font-style:italic;letter-spacing:0}
-.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 8px 0 24px;border-radius:60px;background:var(--ink);color:var(--paper);font-weight:800;transition:transform .4s var(--ease),background .3s}
-.btn b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--butter);color:var(--ink);transition:transform .5s var(--ease)}
-.btn:hover{transform:translateY(-2px)}.btn:hover b{transform:rotate(-45deg)}
-.btn.alt{background:var(--butter);color:var(--ink)}.btn.alt b{background:var(--ink);color:var(--butter)}
-#pre{position:fixed;inset:0;z-index:100;background:var(--butter);display:grid;place-items:center;font-size:4rem;transition:opacity .5s .3s,visibility 0s .8s}
-#pre span{animation:wob 1s ease-in-out infinite}@keyframes wob{50%{transform:rotate(14deg) scale(1.15)}}
+:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+.wrap{width:min(1180px,100% - 3rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(2.8rem,6vw,5.2rem)}
+em{font-style:italic}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 28px;border-radius:50px;background:var(--espresso);color:var(--ivory);font-weight:500;font-size:.92rem;letter-spacing:.02em;transition:background .4s var(--ease),transform .4s var(--ease)}
+.btn span{color:var(--brass);transition:transform .4s var(--ease)}
+.btn:hover{background:var(--olive)}.btn:hover span{transform:translateX(5px)}
+.btn.line{background:transparent;color:inherit;border:1px solid currentColor}.btn.line:hover{background:rgba(176,141,87,.15)}
+.btn.brass{background:var(--brass);color:var(--espresso)}.btn.brass span{color:var(--espresso)}.btn.brass:hover{background:#c4a06a}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:22px;display:block}
+#pre{position:fixed;inset:0;z-index:100;background:var(--espresso);display:grid;place-items:center;color:var(--brass);font-family:var(--serif);font-size:2.2rem;font-style:italic;transition:opacity .7s .4s,visibility 0s 1.1s}
 body.ready #pre{opacity:0;visibility:hidden}
 
 /* nav */
-.bar{position:sticky;top:0;z-index:40;background:rgba(255,250,240,.9);backdrop-filter:blur(12px);border-bottom:2px solid var(--ink)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:-.03em}
-.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--butter);border:2px solid var(--ink);font-style:normal}
-.bar nav{display:flex;gap:28px;font-size:.95rem}
-.bar nav a{position:relative}.bar nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
-.bar nav a:hover::after{transform:scaleX(1)}
-.chip{display:flex;align-items:center;gap:8px;font-size:.85rem;padding:6px 12px;border-radius:30px;border:2px solid var(--ink)}
-.chip u{width:9px;height:9px;border-radius:50%;background:#c33;text-decoration:none}.chip.open u{background:#2a9d4a;animation:pulse 2s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(42,157,74,.25)}}
-.bar .right{display:flex;align-items:center;gap:14px}
-@media(max-width:900px){.bar nav,.chip{display:none}}
+.bar{position:sticky;top:0;z-index:40;background:rgba(246,241,231,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:78px;gap:20px}
+.bar nav{display:flex;gap:30px;font-size:.9rem}
+.bar nav a,.foot a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--ease)}
+.bar nav a:hover,.foot a:hover{background-size:100% 1px}
+.logo{font-family:var(--serif);font-size:1.9rem;letter-spacing:.01em;text-align:center}
+.bar .right{display:flex;justify-content:flex-end;align-items:center;gap:20px;font-size:.85rem}
+.chip{color:var(--clay)}
+.bar .btn{padding:11px 22px}
+@media(max-width:900px){.bar .wrap{grid-template-columns:auto 1fr}.bar nav,.chip{display:none}.logo{text-align:left}.bar .right{justify-content:flex-end}}
 
 /* hero */
-.hero{padding:50px 0 0;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:560px}
+.hero{padding:70px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;min-height:600px}
 .titles{display:grid}
-.titles>div{grid-area:1/1;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .5s,transform .7s var(--ease)}
+.titles>div{grid-area:1/1;opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .6s,transform .9s var(--ease)}
 .titles>div.on{opacity:1;transform:none;pointer-events:auto}
-.titles h1{font-size:clamp(3.4rem,8.4vw,7.6rem);margin-bottom:22px}
-.titles p{font-size:1.25rem;max-width:34ch;margin-bottom:28px}
-.tabs{display:flex;gap:10px;margin-top:40px;flex-wrap:wrap}
-.tab{position:relative;padding:12px 18px;border-radius:40px;border:2px solid var(--ink);font-size:.9rem;overflow:hidden;z-index:0}
-.tab u{position:absolute;inset:0;background:var(--butter);transform:scaleX(0);transform-origin:left;z-index:-1}
-.tab.on u{animation:fill 6s linear forwards}@keyframes fill{to{transform:scaleX(1)}}
-.art{position:relative;aspect-ratio:1;max-width:520px;width:100%;justify-self:center}
-.art div{position:absolute;inset:0;border-radius:46% 54% 50% 50%/52% 48% 52% 48%;display:grid;place-items:center;font-size:min(18vw,170px);opacity:0;transform:scale(.88) rotate(-6deg);transition:opacity .6s,transform .9s var(--ease);border:2px solid var(--ink);box-shadow:10px 10px 0 var(--ink)}
+.titles h1{font-size:clamp(3.6rem,8.2vw,7.4rem);font-weight:300;margin-bottom:26px}
+.titles p{font-size:1.15rem;max-width:40ch;margin-bottom:34px;color:#4a3d34}
+.tabs{display:flex;gap:26px;margin-top:54px;flex-wrap:wrap}
+.tab{position:relative;padding:14px 0 0;font-size:.85rem;letter-spacing:.06em;color:#6b5b4e;text-align:left;min-width:120px}
+.tab::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--line)}
+.tab u{position:absolute;top:0;left:0;right:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left}
+.tab.on{color:var(--espresso)}.tab.on u{animation:fill 6s linear forwards}@keyframes fill{to{transform:scaleX(1)}}
+.art{position:relative;aspect-ratio:4/5;max-width:470px;width:100%;justify-self:center}
+.art div{position:absolute;inset:0;border-radius:999px 999px 6px 6px;display:grid;place-items:center;opacity:0;transform:scale(.97);transition:opacity .8s,transform 1.2s var(--ease);overflow:hidden}
 .art div.on{opacity:1;transform:none}
-.strip{margin-top:46px;border-block:2px solid var(--ink);background:var(--butter);overflow:hidden;padding:14px 0}
-.strip ul{display:flex;gap:38px;list-style:none;width:max-content;animation:run 40s linear infinite;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.art svg{width:86%;color:var(--l);filter:drop-shadow(0 24px 24px rgba(36,27,22,.28));margin-top:22%}
+.strip{margin-top:70px;border-block:1px solid var(--line);overflow:hidden;padding:20px 0}
+.strip ul{display:flex;gap:44px;list-style:none;width:max-content;animation:run 55s linear infinite;font-family:var(--serif);font-size:1.7rem;font-style:italic;white-space:nowrap;color:var(--clay)}
+.strip li::after{content:"✦";margin-left:44px;font-size:.8rem;color:var(--brass);font-style:normal;vertical-align:middle}
 .strip:hover ul{animation-play-state:paused}
 @keyframes run{to{transform:translateX(-50%)}}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.art{max-width:320px}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:30px}.art{max-width:300px}}
 
-/* history */
-.hist{padding:120px 0 80px;text-align:center;background:var(--sky);border-bottom:2px solid var(--ink)}
-.hist h2{font-size:clamp(3rem,7.4vw,6.6rem);margin-bottom:26px}
-.hist .lead{max-width:44ch;margin:0 auto 30px;font-size:1.25rem}
-.orbit{position:relative;width:min(1000px,96vw);aspect-ratio:1.6;margin:30px auto 0}
-.orbit svg{position:absolute;inset:0;width:100%;height:100%}
-.orbit ellipse{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:3 9}
-.orbit .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:24%;aspect-ratio:1;border-radius:50%;background:var(--ink);color:var(--butter);display:grid;place-items:center;font-size:clamp(1.6rem,4.6vw,4rem);font-weight:800;letter-spacing:-.04em}
-.ph{position:absolute;transform:translate(-50%,-50%);width:clamp(52px,9vw,92px);aspect-ratio:1;border-radius:50%;background:var(--c);border:2px solid var(--ink);display:grid;place-items:center;font-size:clamp(1.4rem,3.6vw,2.6rem);transition:transform .5s var(--ease);cursor:pointer}
-.ph:hover,.ph:focus{transform:translate(-50%,-50%) scale(1.14) rotate(-6deg)}
-.ph span{position:absolute;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);width:max-content;max-width:230px;padding:10px 16px;border-radius:14px;background:var(--ink);color:var(--paper);font-size:.9rem;line-height:1.35;opacity:0;pointer-events:none;transition:.4s var(--ease);z-index:5}
+/* story */
+.hist{padding:130px 0 90px;text-align:center;background:var(--bone)}
+.hist h2{margin-bottom:24px}
+.hist .lead{max-width:46ch;margin:0 auto;font-size:1.15rem;color:#4a3d34}
+.orbit{position:relative;width:min(1000px,96vw);aspect-ratio:1.6;margin:40px auto 0}
+.orbit svg.r{position:absolute;inset:0;width:100%;height:100%}
+.orbit ellipse{fill:none;stroke:var(--brass);stroke-width:1;stroke-dasharray:2 8;opacity:.8}
+.orbit .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:26%;text-align:center;font-family:var(--serif);font-size:clamp(1.4rem,3.4vw,2.8rem);line-height:1.05;font-style:italic}
+.ph{position:absolute;transform:translate(-50%,-50%);width:clamp(54px,9vw,88px);aspect-ratio:1;border-radius:50%;background:var(--ivory);border:1px solid var(--brass);display:grid;place-items:center;font-family:var(--serif);font-size:clamp(1rem,2.2vw,1.6rem);transition:transform .5s var(--ease),background .4s;cursor:pointer}
+.ph:hover,.ph:focus{transform:translate(-50%,-50%) scale(1.12);background:var(--espresso);color:var(--brass)}
+.ph span{position:absolute;bottom:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(8px);width:max-content;max-width:240px;padding:12px 18px;border-radius:4px;background:var(--espresso);color:var(--ivory);font-family:var(--sans);font-size:.88rem;line-height:1.45;opacity:0;pointer-events:none;transition:.4s var(--ease);z-index:5}
 .ph:hover span,.ph:focus span{opacity:1;transform:translateX(-50%)}
 
-/* journey */
-.journey{padding:110px 0 80px;text-align:center;background:var(--ink);color:var(--paper);overflow:hidden}
-.journey h2{font-size:clamp(3rem,7vw,6.2rem)}
-.curve{position:relative;width:min(1100px,100%);aspect-ratio:3.1;margin:30px auto 0}
+/* process */
+.process{padding:130px 0 100px;text-align:center;background:var(--olive);color:var(--ivory);overflow:hidden}
+.process .eyebrow{color:var(--brass)}
+.curve{position:relative;width:min(1100px,100%);aspect-ratio:3.1;margin:40px auto 0}
 .curve svg{position:absolute;inset:0;width:100%;height:100%}
-.curve path{fill:none;stroke:var(--butter);stroke-width:3;stroke-dasharray:2 12;stroke-linecap:round}
-.node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:1.05rem}
-.node i{display:grid;place-items:center;font-style:normal;width:clamp(48px,7vw,78px);aspect-ratio:1;border-radius:50%;background:var(--ink);border:2px solid var(--paper);font-size:clamp(1.4rem,3vw,2.2rem);transition:.5s var(--ease)}
-.node.on i,.node:hover i{background:var(--butter);border-color:var(--butter);transform:scale(1.15) rotate(-6deg)}
-.node.on{color:var(--butter)}
-.journey p{max-width:50ch;margin:10px auto 28px;font-size:1.25rem;min-height:3.2em}
+.curve path{fill:none;stroke:var(--brass);stroke-width:1;stroke-dasharray:2 9;opacity:.9}
+.node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:12px;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase}
+.node i{display:grid;place-items:center;font-style:normal;width:clamp(46px,6.4vw,74px);aspect-ratio:1;border-radius:50%;border:1px solid var(--brass);font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.9rem);text-transform:none;letter-spacing:0;transition:.5s var(--ease)}
+.node.on i,.node:hover i{background:var(--brass);color:var(--espresso);transform:scale(1.12)}
+.node.on{color:var(--brass)}
+.process p{max-width:50ch;margin:10px auto 30px;font-size:1.15rem;min-height:3.4em;color:#e4dccb}
 
-/* zine rows */
-.mag{padding:24px 0;background:var(--blush);border-bottom:2px solid var(--ink);overflow:hidden}
-.row{display:flex;gap:14px;width:max-content}
-.row.a{animation:run 55s linear infinite}.row.b{animation:run 55s linear infinite reverse}
-.row i{display:grid;place-items:center;width:clamp(110px,14vw,210px);aspect-ratio:3/4;border-radius:18px;background:var(--c);border:2px solid var(--ink);font-style:normal;font-size:clamp(2.4rem,6vw,4.6rem)}
-.mag .mid{text-align:center;padding:60px 20px}
-.mag h2{font-size:clamp(3rem,7vw,6.2rem)}
-.mag p{max-width:42ch;margin:18px auto 26px;font-size:1.25rem}
-.mag form{display:inline-flex;gap:8px;max-width:100%}
-.mag input{height:52px;padding:0 20px;border-radius:40px;border:2px solid var(--ink);background:var(--paper);font:inherit;width:min(300px,52vw)}
+/* letter */
+.mag{padding:30px 0;overflow:hidden}
+.row{display:flex;gap:18px;width:max-content}
+.row.a{animation:run 70s linear infinite}.row.b{animation:run 70s linear infinite reverse}
+.row i{display:grid;place-items:center;width:clamp(150px,18vw,260px);aspect-ratio:4/3;border-radius:4px;background:var(--c);flex:none}
+.row svg{width:70%;color:var(--l);filter:drop-shadow(0 12px 12px rgba(0,0,0,.25))}
+.mag .mid{text-align:center;padding:84px 20px}
+.mag p{max-width:44ch;margin:20px auto 30px;font-size:1.15rem;color:#4a3d34}
+.mag form{display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.mag input{height:54px;padding:0 24px;border-radius:50px;border:1px solid var(--espresso);background:transparent;font:inherit;width:min(320px,80vw)}
 
-/* classes */
-.classes{padding:110px 0;background:var(--paper)}
-.classes .wrap{display:grid;grid-template-columns:5fr 7fr;gap:60px}
-.classes h2{font-size:clamp(2.8rem,5.4vw,4.8rem);margin-bottom:22px}
-.classes .lead{font-size:1.3rem;max-width:30ch}
-.cl{display:grid;grid-template-columns:1fr 1.2fr;gap:26px;padding:26px;border:2px solid var(--ink);border-radius:26px;margin-bottom:22px;background:var(--c);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.cl:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--ink)}
-.cl h3{font-size:2rem;margin-bottom:16px}
-.cl p{font-size:1rem}.cl .e{font-size:3.4rem;margin-bottom:8px}
-@media(max-width:900px){.classes .wrap,.cl{grid-template-columns:1fr}}
+/* workshops */
+.classes{padding:120px 0;background:var(--bone)}
+.classes .wrap{display:grid;grid-template-columns:5fr 7fr;gap:80px}
+.classes h2{margin-bottom:22px}
+.classes .lead{font-size:1.15rem;max-width:32ch;color:#4a3d34}
+.cl{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;padding:34px 0;border-top:1px solid var(--line)}
+.cl:last-child{border-bottom:1px solid var(--line)}
+.cl h3{font-size:2.2rem;margin-bottom:6px}
+.cl small{display:block;color:var(--clay);margin-bottom:18px;letter-spacing:.06em;font-size:.82rem;text-transform:uppercase}
+.cl p{color:#4a3d34}
+@media(max-width:900px){.classes .wrap,.cl{grid-template-columns:1fr;gap:20px}}
 
 /* quiz */
-.quiz{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:var(--butter);border-block:2px solid var(--ink)}
-.ring{position:absolute;left:50%;top:50%;width:0;height:0;animation:spin 90s linear infinite}
-.ring b{position:absolute;left:0;top:0;width:60px;height:60px;margin:-30px;display:grid;place-items:center;font-size:clamp(1.6rem,3.6vw,2.8rem);transform:rotate(calc(var(--i)*20deg)) translateY(calc(-1*min(44vw,46vh))) rotate(calc(var(--i)*-20deg))}
+.quiz{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:var(--ivory)}
+.ring{position:absolute;left:50%;top:50%;width:0;height:0;animation:spin 140s linear infinite}
+.ring svg{position:absolute;left:0;top:0;width:clamp(62px,8vw,104px);margin:calc(clamp(62px,8vw,104px)*-.3) 0 0 calc(clamp(62px,8vw,104px)/-2);color:var(--l);opacity:.9;transform:rotate(calc(var(--i)*20deg)) translateY(calc(-1*min(44vw,46vh))) rotate(calc(var(--i)*-20deg))}
 @keyframes spin{to{transform:rotate(360deg)}}
-.qcard{position:relative;z-index:2;background:var(--paper);border:2px solid var(--ink);border-radius:30px;padding:40px 34px;width:min(560px,90vw);box-shadow:10px 10px 0 var(--ink)}
-.qcard h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:12px}
-.qcard p{margin-bottom:22px;font-size:1.1rem}
+.qcard{position:relative;z-index:2;background:var(--ivory);border:1px solid var(--brass);border-radius:6px;padding:52px 40px;width:min(560px,90vw);box-shadow:0 30px 60px -30px rgba(36,27,22,.35)}
+.qcard h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin-bottom:14px}
+.qcard p{margin-bottom:26px;color:#4a3d34}
 .opts{display:grid;gap:10px}
-.opts button{padding:14px 18px;border:2px solid var(--ink);border-radius:40px;font-weight:800;transition:.3s var(--ease)}
-.opts button:hover{background:var(--butter);transform:translateX(4px)}
-.qstep{font-size:.9rem;margin-bottom:10px;opacity:.7}
+.opts button{padding:15px 20px;border:1px solid var(--line);border-radius:50px;font-weight:500;transition:.4s var(--ease)}
+.opts button:hover{border-color:var(--brass);background:var(--bone);transform:translateX(4px)}
+.qstep{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+.qcard svg{width:150px;margin:0 auto 10px;display:block;color:var(--l)}
 
 /* journal */
-.journal{padding:110px 0}
-.journal .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:46px}
-.journal h2{font-size:clamp(2.8rem,5.4vw,4.8rem)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
-.card .img{display:grid;place-items:center;font-size:4.4rem;height:var(--h);border-radius:22px;background:var(--c);border:2px solid var(--ink);margin-bottom:14px;transition:transform .5s var(--ease)}
-.card:hover .img{transform:rotate(-1.6deg) scale(1.02)}
-.card h3{font-size:1.5rem;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
-.tag{display:inline-block;padding:2px 12px;border:2px solid var(--ink);border-radius:30px;font-size:.85rem;margin-right:8px}
-@media(max-width:900px){.cards{display:flex;overflow-x:auto;gap:14px;padding-bottom:14px}.card{flex:0 0 76vw}}
+.journal{padding:120px 0}
+.journal .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:56px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.card .img{display:grid;place-items:center;height:var(--h);border-radius:4px;background:var(--c);margin-bottom:18px;overflow:hidden}
+.card .img svg{width:62%;color:var(--l);filter:drop-shadow(0 14px 14px rgba(0,0,0,.25));transition:transform 1s var(--ease)}
+.card:hover .img svg{transform:scale(1.06) rotate(-2deg)}
+.card h3{font-size:1.7rem;line-height:1.12;margin-bottom:10px}
+.card small{color:var(--clay);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:900px){.cards{display:flex;overflow-x:auto;gap:16px;padding-bottom:14px}.card{flex:0 0 76vw}}
 
-/* local */
-.local{position:relative;background:var(--ink);color:var(--butter);padding:140px 0;text-align:center;overflow:hidden}
-.local .t1,.local .t2{position:absolute;display:grid;place-items:center;border-radius:26px;background:var(--c);border:2px solid var(--butter);font-size:clamp(3rem,7vw,5.6rem)}
-.local .t1{left:-24px;bottom:22%;width:min(26vw,250px);aspect-ratio:4/5;transform:rotate(-6deg)}
-.local .t2{right:-24px;bottom:8%;width:min(30vw,300px);aspect-ratio:1;transform:rotate(7deg)}
+/* sourcing */
+.local{position:relative;background:var(--espresso);color:var(--ivory);padding:150px 0;text-align:center;overflow:hidden}
+.local .t1,.local .t2{position:absolute;border-radius:4px;background:var(--c);display:grid;place-items:center}
+.local .t1{left:-30px;bottom:20%;width:min(26vw,260px);aspect-ratio:4/5;transform:rotate(-4deg)}
+.local .t2{right:-30px;bottom:6%;width:min(30vw,320px);aspect-ratio:1;transform:rotate(5deg)}
+.local .t1 svg,.local .t2 svg{width:80%;color:var(--l)}
 .local .in{position:relative;z-index:2}
-.local h2{font-size:clamp(3rem,7.6vw,6.8rem);margin-bottom:30px}
-.local p{max-width:44ch;margin:0 auto 30px;color:var(--paper);font-size:1.25rem}
+.local .eyebrow{color:var(--brass)}
+.local h2{margin-bottom:28px}
+.local p{max-width:46ch;margin:0 auto 34px;font-size:1.15rem;color:#e4dccb}
 
 /* order + footer */
-.order{padding:120px 0;text-align:center;background:var(--blush);border-bottom:2px solid var(--ink)}
-.order h2{font-size:clamp(3.4rem,10vw,9rem);margin-bottom:28px}
-.foot{background:var(--paper);padding:70px 0 26px}
-.foot .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:34px}
-.foot h4{font-size:1.15rem;margin-bottom:10px;font-weight:800}
-.foot ul{list-style:none;display:grid;gap:6px}
-.foot a{display:inline-block;transition:.3s}.foot a:hover{transform:translateX(3px);text-decoration:underline}
-.foot .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:56px;padding-top:20px;border-top:2px solid var(--ink);font-size:.9rem}
+.order{padding:140px 0;text-align:center;background:var(--bone)}
+.order h2{font-size:clamp(3.2rem,9vw,8rem);margin-bottom:34px;font-weight:300}
+.foot{background:var(--olive);color:var(--bone);padding:80px 0 28px}
+.foot .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.foot h4{font-family:var(--serif);font-size:1.4rem;font-weight:400;margin-bottom:12px;color:var(--ivory)}
+.foot ul{list-style:none;display:grid;gap:6px;font-size:.95rem}
+.foot .logo{text-align:left;color:var(--ivory)}
+.foot .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:64px;padding-top:22px;border-top:1px solid rgba(235,227,211,.2);font-size:.85rem;opacity:.7}
 @media(max-width:860px){.foot .grid{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-<div id="pre"><span>🥐</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="loaf" viewBox="0 0 200 124"><path d="M8 76C8 30 56 8 100 8s92 22 92 68c0 30-42 44-92 44S8 106 8 76Z" fill="currentColor"/><path d="M8 76C8 30 56 8 100 8s92 22 92 68" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="3"/><g fill="none" stroke="rgba(255,248,235,.62)" stroke-width="6" stroke-linecap="round"><path d="M52 40q18 24 8 54"/><path d="M96 30q18 28 8 64"/><path d="M140 40q18 24 8 54"/></g></symbol></svg>
+
+<div id="pre">Atelier Levain</div>
 
 <header class="bar">
   <div class="wrap">
-    <a class="logo" href="#"><i>🥖</i>Hollis Street</a>
-    <nav aria-label="Main"><a href="#bakes">Today’s bakes</a><a href="#story">Our story</a><a href="#process">How we bake</a><a href="#classes">Classes</a><a href="#journal">Journal</a></nav>
-    <div class="right"><span class="chip" id="chip"><u></u><span id="chipt">Hours</span></span><a class="btn" href="#order">Order ahead <b>→</b></a></div>
+    <nav aria-label="Main"><a href="#bakes">The bakes</a><a href="#story">Our story</a><a href="#process">The process</a><a href="#classes">Workshops</a></nav>
+    <a class="logo" href="#">Atelier Levain</a>
+    <div class="right"><span class="chip" id="chip"></span><a class="btn" href="#order">Order a loaf <span>→</span></a></div>
   </div>
 </header>
 
 <main>
 <section class="hero" id="bakes">
   <div class="wrap hero-grid">
-    <div>
-      <div class="titles" id="titles"></div>
-      <div class="tabs" id="tabs"></div>
-    </div>
+    <div><div class="titles" id="titles"></div><div class="tabs" id="tabs"></div></div>
     <div class="art" id="art"></div>
   </div>
   <div class="strip"><ul id="strip"></ul></div>
@@ -180,37 +186,40 @@ body.ready #pre{opacity:0;visibility:hidden}
 
 <section class="hist" id="story">
   <div class="wrap">
-    <h2>Thirty-seven years of <span class="serif">early mornings.</span></h2>
-    <p class="lead">Hollis Street started with one oven and a hand-written sign. Hover over a bubble to see what changed along the way.</p>
+    <span class="eyebrow">Our story</span>
+    <h2>A starter, a stone oven, <em>and patience.</em></h2>
+    <p class="lead">What began as a jar on the kitchen counter became a weekly ritual for our neighbors. Hover over a year to see how it grew.</p>
   </div>
-  <div class="orbit" id="orbit"><svg viewBox="0 0 1000 620" preserveAspectRatio="none"><ellipse cx="500" cy="310" rx="470" ry="290"/></svg><div class="core">1987</div></div>
+  <div class="orbit" id="orbit"><svg class="r" viewBox="0 0 1000 620" preserveAspectRatio="none"><ellipse cx="500" cy="310" rx="470" ry="290"/></svg><div class="core">Est.<br>2019</div></div>
 </section>
 
-<section class="journey" id="process">
+<section class="process" id="process">
   <div class="wrap">
-    <h2>From flour to <span class="serif">the counter</span></h2>
+    <span class="eyebrow">The process</span>
+    <h2>Thirty-six hours, <em>start to finish</em></h2>
     <div class="curve" id="curve"><svg viewBox="0 0 310 100" preserveAspectRatio="none"><path vector-effect="non-scaling-stroke" d="M10 70 C 60 70, 60 25, 110 30 S 170 85, 205 70 S 270 20, 300 22"/></svg></div>
     <p id="jtxt"></p>
-    <a class="btn alt" href="#classes">Learn to bake it <b>→</b></a>
+    <a class="btn line" href="#classes">Learn the craft <span>→</span></a>
   </div>
 </section>
 
 <section class="mag">
   <div class="row a" id="rowA"></div>
   <div class="mid">
-    <h2>The Crumb <span class="serif">Letter</span></h2>
-    <p>One short email every Friday: what’s coming out of the oven, a recipe to try, and the occasional neighborhood gossip.</p>
-    <form onsubmit="return false"><input type="email" placeholder="you@example.com" aria-label="Email address"><button class="btn" type="submit">Sign up <b>→</b></button></form>
+    <span class="eyebrow">The letter</span>
+    <h2>Notes from <em>the bench</em></h2>
+    <p>A short note each week: what’s in the oven, what’s fermenting, and a recipe worth making at home.</p>
+    <form onsubmit="return false"><input type="email" placeholder="Your email address" aria-label="Email address"><button class="btn" type="submit">Subscribe <span>→</span></button></form>
   </div>
   <div class="row b" id="rowB"></div>
 </section>
 
 <section class="classes" id="classes">
   <div class="wrap">
-    <div><h2>Come bake <span class="serif">with us</span></h2><p class="lead">Two ways to get flour on your apron. Placeholder copy: replace with your real offers.</p></div>
+    <div><span class="eyebrow">Join us</span><h2>Learn the <em>slow way</em></h2><p class="lead">Placeholder copy: describe your real workshops and subscription here.</p></div>
     <div>
-      <div class="cl" style="--c:var(--sky)"><div><div class="e">🥣</div><h3>Sunday classes</h3><a class="btn" href="#">See dates <b>→</b></a></div><p>Three hours, one big batch of dough, and a loaf to take home. No experience needed, aprons provided.</p></div>
-      <div class="cl" style="--c:var(--blush)"><div><div class="e">🧺</div><h3>Bread club</h3><a class="btn" href="#">Join <b>→</b></a></div><p>A fresh loaf and a pastry waiting for you every Saturday. Pause or skip any week you like.</p></div>
+      <div class="cl"><div><small>Hands-on · 3 hours</small><h3>Sourdough workshop</h3><a class="btn line" href="#">See dates <span>→</span></a></div><p>Learn to feed a starter, mix, fold and shape. You’ll leave with your own starter and a loaf of your own.</p></div>
+      <div class="cl"><div><small>Weekly · Pause anytime</small><h3>The loaf subscription</h3><a class="btn line" href="#">Subscribe <span>→</span></a></div><p>A freshly baked loaf reserved for you every week, with first access to seasonal flavors.</p></div>
     </div>
   </div>
 </section>
@@ -222,90 +231,90 @@ body.ready #pre{opacity:0;visibility:hidden}
 
 <section class="journal" id="journal">
   <div class="wrap">
-    <div class="head"><h2>From the counter</h2><a class="btn" href="#">All stories <b>→</b></a></div>
+    <div class="head"><div><span class="eyebrow">Journal</span><h2>From the kitchen</h2></div><a class="btn line" href="#">All stories <span>→</span></a></div>
     <div class="cards">
-      <article class="card"><a href="#"><div class="img" style="--c:var(--butter);--h:320px">🥖</div><h3>Why we start the sourdough at 4 pm the day before</h3><span class="tag">Craft</span>Jan 13, 2026</a></article>
-      <article class="card"><a href="#"><div class="img" style="--c:var(--sky);--h:420px">🌾</div><h3>Meet the farm that grows our rye, two counties over</h3><span class="tag">People</span>May 6, 2025</a></article>
-      <article class="card"><a href="#"><div class="img" style="--c:var(--blush);--h:270px">🥐</div><h3>The croissant recipe, finally written down</h3><span class="tag">Recipes</span>Feb 13, 2025</a></article>
+      <article class="card"><a href="#"><div class="img" style="--c:#d9c7a3;--h:340px;--l:#8a5a32"><svg><use href="#loaf"/></svg></div><small>Craft</small><h3>Why we ferment for thirty-six hours</h3></a></article>
+      <article class="card"><a href="#"><div class="img" style="--c:#2b3528;--h:440px;--l:#c0925a"><svg><use href="#loaf"/></svg></div><small>Ingredients</small><h3>The family mill behind our stone-ground flour</h3></a></article>
+      <article class="card"><a href="#"><div class="img" style="--c:#c9a98a;--h:290px;--l:#5a3a22"><svg><use href="#loaf"/></svg></div><small>Recipes</small><h3>How to keep a starter alive through winter</h3></a></article>
     </div>
   </div>
 </section>
 
 <section class="local">
-  <div class="t1" style="--c:#2c3a66">🌾</div><div class="t2" style="--c:#7a3b1b">♻️</div>
-  <div class="in wrap"><h2>Local flour, <span class="serif">zero-waste Tuesdays</span></h2><p>Placeholder copy about sourcing grain nearby and turning yesterday’s bread into today’s croutons, crumbs and community donations.</p><a class="btn alt" href="#">Our promise <b>→</b></a></div>
+  <div class="t1" style="--c:#35412f;--l:#b98a52"><svg><use href="#loaf"/></svg></div><div class="t2" style="--c:#4a3426;--l:#d0a56a"><svg><use href="#loaf"/></svg></div>
+  <div class="in wrap"><span class="eyebrow">Sourcing</span><h2>Three ingredients, <em>nothing else</em></h2><p>Placeholder copy: organic stone-milled flour, filtered water and sea salt, fermented with a wild starter that’s been fed daily since 2019.</p><a class="btn brass" href="#">Our ingredients <span>→</span></a></div>
 </section>
 
 <section class="order" id="order">
-  <div class="wrap"><h2>Order tomorrow’s <span class="serif">breakfast tonight</span></h2><a class="btn" href="#">Order ahead <b>→</b></a></div>
+  <div class="wrap"><span class="eyebrow" id="nb"></span><h2>Reserve your <em>loaf</em></h2><a class="btn" href="#">Pre-order now <span>→</span></a></div>
 </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
     <div class="grid">
-      <div><a class="logo" href="#"><i>🥖</i>Hollis Street</a><p style="margin-top:12px">48 Hollis Street<br>Your Town, ST 00000</p></div>
-      <div><h4>Hours</h4><ul><li>Tue–Fri 7am–3pm</li><li>Sat–Sun 8am–2pm</li><li>Mon closed</li></ul></div>
-      <div><h4>Visit</h4><ul><li><a href="#bakes">Today’s bakes</a></li><li><a href="#classes">Classes</a></li><li><a href="#journal">Journal</a></li></ul></div>
-      <div><h4>Say hi</h4><ul><li><a href="mailto:hello@example.com">hello@example.com</a></li><li>(000) 000-0000</li><li><a href="#">Instagram</a></li></ul></div>
+      <div><a class="logo" href="#">Atelier Levain</a><p style="margin-top:14px;max-width:26ch">Naturally leavened sourdough, baked by hand in small batches.</p></div>
+      <div><h4>Pickup</h4><ul><li>Thursday 8am–12pm</li><li>Saturday 8am–12pm</li><li>Your Town, ST</li></ul></div>
+      <div><h4>Explore</h4><ul><li><a href="#story">Our story</a></li><li><a href="#classes">Workshops</a></li><li><a href="#journal">Journal</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:hello@example.com">hello@example.com</a></li><li>(000) 000-0000</li><li><a href="#">Instagram</a></li></ul></div>
     </div>
-    <div class="legal"><span>© 2026 Hollis Street Bakery</span><span>Privacy · Terms</span></div>
+    <div class="legal"><span>© 2026 Atelier Levain</span><span>Privacy · Terms</span></div>
   </div>
 </footer>
 
 <script>
 (function(){
   var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
-  window.addEventListener('load',function(){setTimeout(function(){document.body.classList.add('ready')},500)});
+  var L=function(c){return '<svg viewBox="0 0 200 124" style="color:'+c+'"><use href="#loaf"/></svg>'};
+  window.addEventListener('load',function(){setTimeout(function(){document.body.classList.add('ready')},600)});
 
-  /* open now chip: Tue-Fri 7-15, Sat-Sun 8-14, Mon closed */
-  var n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,op=false,txt='';
-  if(d>=2&&d<=5){op=h>=7&&h<15;txt=op?'Open until 3pm':'Opens Tue–Fri 7am'}else if(d===6||d===0){op=h>=8&&h<14;txt=op?'Open until 2pm':'Opens 8am weekends'}else txt='Closed Mondays';
-  $('#chip').classList.toggle('open',op);$('#chipt').textContent=txt;
+  /* next bake day: Thursday and Saturday */
+  var D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],t=new Date(),nx;
+  for(var i=0;i<7;i++){var dd=(t.getDay()+i)%7;if((dd===4||dd===6)&&!(i===0&&t.getHours()>=12)){nx=D[dd];break}}
+  $('#chip').textContent='Next bake: '+nx;$('#nb').textContent='Next bake: '+nx;
 
   /* hero */
-  var S=[{h:'Warm bread by seven.',p:'Sourdough, rye and seeded loaves, out of the oven before the street wakes up.',e:'🍞',c:'#f6c945',t:'Morning loaves'},
-         {h:'Pastry that shatters.',p:'Butter croissants, almond twists and the famous cardamom bun, folded by hand.',e:'🥐',c:'#f4b6c2',t:'Pastry case'},
-         {h:'Sweet things for later.',p:'Cookies, tarts and celebration cakes you can order ahead and pick up in minutes.',e:'🧁',c:'#bfd7ea',t:'Sweet things'}];
-  var ti='',ta='',tb='';
-  S.forEach(function(s,i){ti+='<div><h1>'+s.h+'</h1><p>'+s.p+'</p><a class="btn" href="#order">Order ahead <b>→</b></a></div>';
-    ta+='<div style="background:'+s.c+'">'+s.e+'</div>';tb+='<button class="tab"><u></u>'+s.t+'</button>'});
-  $('#titles').innerHTML=ti;$('#art').innerHTML=ta;$('#tabs').innerHTML=tb;
+  var S=[{h:'Slow bread, <em>made by hand.</em>',p:'Naturally leavened sourdough, fermented for thirty-six hours and baked in small batches each week.',c:'#d9c7a3',l:'#8a5a32',t:'The country loaf'},
+         {h:'Flour, water, salt. <em>Time.</em>',p:'Organic stone-ground flour, a wild starter and nothing you can’t pronounce.',c:'#2b3528',l:'#c0925a',t:'Our ingredients'},
+         {h:'Baked every <em>Thursday and Saturday.</em>',p:'Pre-order your loaf, then collect it still warm. Placeholder schedule: change to match yours.',c:'#c9a98a',l:'#5a3a22',t:'Weekly bakes'}];
+  var a='',b='',c='';S.forEach(function(s){a+='<div><h1>'+s.h+'</h1><p>'+s.p+'</p><a class="btn" href="#order">Order a loaf <span>→</span></a></div>';
+    b+='<div style="background:'+s.c+';--l:'+s.l+'">'+L(s.l)+'</div>';c+='<button class="tab"><u></u>'+s.t+'</button>'});
+  $('#titles').innerHTML=a;$('#art').innerHTML=b;$('#tabs').innerHTML=c;
   var T=$$('#titles>div'),A=$$('#art>div'),B=$$('.tab'),cur=0,tm;
   function go(i){cur=i;[T,A,B].forEach(function(g){g.forEach(function(el,j){el.classList.toggle('on',i===j)})});
     var u=B[i].firstChild;u.style.animation='none';void u.offsetWidth;u.style.animation='';
     clearTimeout(tm);tm=setTimeout(function(){go((cur+1)%3)},6000)}
-  B.forEach(function(b,i){b.addEventListener('click',function(){go(i)})});go(0);
+  B.forEach(function(x,i){x.addEventListener('click',function(){go(i)})});go(0);
 
-  var bakes=['Sourdough 🍞','Cardamom bun 🥮','Baguette 🥖','Croissant 🥐','Rye loaf 🌾','Pretzel 🥨','Cookies 🍪','Fruit tart 🥧','Focaccia 🫓','Cinnamon roll 🌀'],st='';
-  for(var k=0;k<2;k++)bakes.forEach(function(b){st+='<li>'+b+'</li>'});$('#strip').innerHTML=st;
+  var N=['Country loaf','Seeded multigrain','Rosemary & sea salt','Olive & thyme','Cinnamon raisin','Rye & caraway','Rustic focaccia','Dark chocolate'],st='';
+  for(var k=0;k<2;k++)N.forEach(function(n){st+='<li>'+n+'</li>'});$('#strip').innerHTML=st;
 
-  /* history orbit */
-  var M=[['🔥','1987','We light a single oven on Hollis Street.','#f6c945',-155],['🥖','1994','The first sourdough starter, still alive today.','#f4b6c2',-110],['🪧','2003','We move next door and add a cafe counter.','#bfd7ea',-68],['🌾','2012','We switch to flour from a farm 40 miles away.','#f6c945',-28],['🎓','2019','The first Sunday baking class sells out.','#f4b6c2',20],['🧺','2024','Bread club launches with 100 neighbors.','#bfd7ea',160]],oh='';
-  M.forEach(function(m){var a=m[4]*Math.PI/180,x=50+47*Math.cos(a),y=50+46*Math.sin(a);
-    oh+='<div class="ph" tabindex="0" style="left:'+x+'%;top:'+y+'%;--c:'+m[3]+'">'+m[0]+'<span><b>'+m[1]+'</b><br>'+m[2]+'</span></div>'});
-  $('#orbit').insertAdjacentHTML('beforeend',oh);
+  /* story orbit */
+  var M=[['2019','The first starter, fed daily ever since.',-155],['2020','Loaves for neighbors, left on the porch.',-110],['2022','A stall at the Saturday market.',-68],['2023','Switched to a family-run stone mill.',-28],['2024','Weekly pre-orders and pickup.',20],['2025','First workshops in the kitchen.',160]],o='';
+  M.forEach(function(m){var r=m[2]*Math.PI/180;o+='<div class="ph" tabindex="0" style="left:'+(50+47*Math.cos(r))+'%;top:'+(50+46*Math.sin(r))+'%">'+m[0]+'<span>'+m[1]+'</span></div>'});
+  $('#orbit').insertAdjacentHTML('beforeend',o);
 
-  /* journey */
-  var J=[['🌾','Mill',10,70,'We buy whole grain from nearby farms and mill what we can ourselves.'],['🥣','Mix',110,30,'Water, flour, salt and a spoonful of the starter we’ve fed since 1994.'],['⏳','Proof',205,70,'The dough rests overnight. Slow fermentation is where the flavor lives.'],['🔥','Bake',300,22,'Into the deck oven before dawn, out when the crust crackles.']],cv=$('#curve'),jt=$('#jtxt'),ji=0;
-  J.forEach(function(s,i){var b=document.createElement('button');b.className='node';b.style.left=(s[2]/310*100)+'%';b.style.top=(s[3]/100*100)+'%';b.innerHTML='<i>'+s[0]+'</i>'+(i+1)+'. '+s[1];
-    b.addEventListener('click',function(){ji=i;pick(i)});cv.appendChild(b)});
+  /* process */
+  var J=[['I','Feed',10,70,'The starter is fed the evening before, so the wild yeast is lively and ready.'],['II','Mix',110,30,'Flour, water and salt are folded together by hand. No machines, no shortcuts.'],['III','Ferment',205,70,'A long, cool fermentation builds flavor, structure and a naturally tangy crumb.'],['IV','Bake',300,22,'Shaped, scored and baked in a steam-filled oven until the crust deepens to mahogany.']],cv=$('#curve'),jt=$('#jtxt'),ji=0;
+  J.forEach(function(s,i){var n=document.createElement('button');n.className='node';n.style.left=(s[2]/310*100)+'%';n.style.top=s[3]+'%';n.innerHTML='<i>'+s[0]+'</i>'+s[1];
+    n.addEventListener('click',function(){ji=i;pick(i)});cv.appendChild(n)});
   function pick(i){$$('.node').forEach(function(n,j){n.classList.toggle('on',i===j)});jt.textContent=J[i][4]}
   pick(0);setInterval(function(){ji=(ji+1)%4;pick(ji)},4500);
 
   /* rows */
-  function row(id,E){var s='',c=['#f6c945','#bfd7ea','#fffaf0','#f4b6c2'];for(var k=0;k<2;k++)for(var i=0;i<12;i++)s+='<i style="--c:'+c[i%4]+'">'+E[i%E.length]+'</i>';$(id).innerHTML=s}
-  row('#rowA',['🥐','🍞','🥖','🥨','🧁','🍪']);row('#rowB',['🥮','🥧','🫓','🌀','🍩','🥯']);
+  function row(id,P){var s='';for(var k=0;k<2;k++)P.forEach(function(p){s+='<i style="background:'+p[0]+'">'+L(p[1])+'</i>'});$(id).innerHTML=s}
+  row('#rowA',[['#d9c7a3','#8a5a32'],['#2b3528','#c0925a'],['#c9a98a','#5a3a22'],['#4a3426','#d0a56a'],['#e4dccb','#7a4d2a'],['#35412f','#b98a52']]);
+  row('#rowB',[['#4a3426','#d0a56a'],['#d9c7a3','#6b4326'],['#35412f','#b98a52'],['#c9a98a','#8a5a32'],['#2b3528','#d0a56a'],['#e4dccb','#5a3a22']]);
 
-  /* quiz ring + quiz */
-  var rg='',re=['🥐','🍞','🥖','🥨','🧁','🍪'];for(var q=0;q<18;q++)rg+='<b style="--i:'+q+'">'+re[q%6]+'</b>';$('#ring').innerHTML=rg;
-  var Q=[['Your ideal morning?',['Slow, with coffee','Out the door fast','Brunch with friends']],['Pick a flavor.',['Buttery','Tangy','Sweet and spiced']],['Your kitchen is…',['Tidy and quiet','A happy mess','Mostly takeout']]],
-      R=[['Sourdough','🍞','Patient, dependable and a little tangy. You’re the loaf everyone trusts.'],['Croissant','🥐','Flaky, ambitious and best when fresh. You’re a layered person.'],['Cinnamon bun','🌀','Warm, generous and a bit messy. You’re the reason people linger.']],sc=[0,0,0],qi=0,qc=$('#qcard');
-  function show(){if(qi>=Q.length){var w=sc.indexOf(Math.max.apply(null,sc)),r=R[w];qc.innerHTML='<div style="font-size:4rem">'+r[1]+'</div><h2>You’re a '+r[0]+'.</h2><p>'+r[2]+'</p><button class="btn" id="again">Try again <b>↺</b></button>';$('#again').onclick=function(){sc=[0,0,0];qi=0;show()};return}
-    var o='';Q[qi][1].forEach(function(t,i){o+='<button data-i="'+i+'">'+t+'</button>'});
-    qc.innerHTML='<div class="qstep">Question '+(qi+1)+' of '+Q.length+'</div><h2>'+Q[qi][0]+'</h2><div class="opts">'+o+'</div>';
-    $$('.opts button').forEach(function(b){b.onclick=function(){sc[+b.dataset.i]++;qi++;show()}})}
-  qc.innerHTML='<h2>Which bake are you?</h2><p>Three quick questions to find your perfect pastry.</p><button class="btn" id="start">Start the quiz <b>→</b></button>';$('#start').onclick=show;
+  /* quiz */
+  var pal=['#8a5a32','#b0804a','#5a3a22'],rg='';for(var q=0;q<18;q++)rg+='<svg viewBox="0 0 200 124" style="--i:'+q+';--l:'+pal[q%3]+'"><use href="#loaf"/></svg>';$('#ring').innerHTML=rg;
+  var Q=[['How do you take your toast?',['Thick, with salted butter','Topped with something savory','With jam and a strong coffee']],['Your ideal Sunday?',['A slow, quiet morning','Friends around a big table','A long walk, then soup']],['Pick a flavor.',['Simple and tangy','Nutty and seeded','Herbal and bright']]],
+      R=[['The Country Loaf','#8a5a32','Classic and quietly confident. You appreciate the fundamentals done beautifully.'],['The Seeded Multigrain','#b0804a','Hearty and generous. You love texture and a table full of people.'],['Rosemary & Sea Salt','#5a3a22','Aromatic and a little adventurous. You’re the one who notices the details.']],sc=[0,0,0],qi=0,qc=$('#qcard');
+  function show(){if(qi>=Q.length){var w=sc.indexOf(Math.max.apply(null,sc)),r=R[w];qc.innerHTML=L(r[1])+'<h2>'+r[0]+'</h2><p>'+r[2]+'</p><button class="btn" id="again">Take it again <span>↺</span></button>';$('#again').onclick=function(){sc=[0,0,0];qi=0;show()};return}
+    var x='';Q[qi][1].forEach(function(t,i){x+='<button data-i="'+i+'">'+t+'</button>'});
+    qc.innerHTML='<div class="qstep">Question '+(qi+1)+' of '+Q.length+'</div><h2>'+Q[qi][0]+'</h2><div class="opts">'+x+'</div>';
+    $$('.opts button').forEach(function(bn){bn.onclick=function(){sc[+bn.dataset.i]++;qi++;show()}})}
+  qc.innerHTML='<span class="eyebrow">A small quiz</span><h2>Which loaf <em>is yours?</em></h2><p>Three short questions to find your perfect sourdough.</p><button class="btn" id="start">Begin <span>→</span></button>';$('#start').onclick=show;
 })();
 </script>
 </body>
